@@ -27,9 +27,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat.getString
 import com.ys.contactsapp.data.DataSource
 import com.ys.contactsapp.model.Contact
 
@@ -47,7 +49,7 @@ class MainActivity : ComponentActivity() {
                             Text("Contacts App")
                         },
                         actions = {
-                            IconButton(onClick = { openDialer("0227953811") }) {
+                            IconButton(onClick = { openDialer(getString(R.string.home_number)) }) {
                                 Icon(
                                     painter = painterResource(id = R.drawable.home_icon),
                                     contentDescription = "Call Home"
@@ -83,9 +85,10 @@ fun ContactsAppGrid(contacts: List<Contact>, modifier: Modifier = Modifier) {
 fun ContactItem(contact: Contact, modifier: Modifier = Modifier) {
     val context = LocalContext.current
     Column(
-        modifier = modifier.background(Color.LightGray)
+        modifier = modifier
+            .background(Color.LightGray)
             .clickable {
-                (context as ComponentActivity).openDialer(contact.phoneNumber)
+                (context as ComponentActivity).openDialer(getString(context, contact.phoneNumber))
             },
         horizontalAlignment = Alignment.CenterHorizontally
 
@@ -95,14 +98,14 @@ fun ContactItem(contact: Contact, modifier: Modifier = Modifier) {
             contentDescription = "Contact Image"
         )
         Text(
-            text = contact.name,
+            text = stringResource(contact.name),
             fontWeight = FontWeight.Medium,
             fontSize = 24.sp,
             modifier = Modifier.padding(bottom = 4.dp)
         )
         SelectionContainer {
             Text(
-                text = contact.phoneNumber,
+                text = stringResource(contact.phoneNumber),
                 fontWeight = FontWeight.Light,
                 fontSize = 12.sp
             )

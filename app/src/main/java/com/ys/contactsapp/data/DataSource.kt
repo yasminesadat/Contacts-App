@@ -8,58 +8,58 @@ class DataSource {
     fun getData(): List<Contact>{
         val contacts = mutableListOf<Contact>()
         contacts.add(Contact(
-            name = "Auntie",
-            phoneNumber = "+201012345678",
+            name = R.string.auntie,
+            phoneNumber = R.string.auntie_phone,
             photo = R.drawable.auntie
         ))
         contacts.add(Contact(
-            name = "Brother",
-            phoneNumber = "+201123456789",
+            name = R.string.brother,
+            phoneNumber = R.string.brother_phone,
             photo = R.drawable.brother
         ))
         contacts.add(Contact(
-            name = "Daughter",
-            phoneNumber = "+20134567890",
+            name = R.string.daughter,
+            phoneNumber = R.string.daughter_phone,
             photo = R.drawable.daughter
         ))
         contacts.add(Contact(
-            name = "Friend1",
-            phoneNumber = "+201345678901",
+            name = R.string.friend1,
+            phoneNumber = R.string.friend1_phone,
             photo = R.drawable.friend_1
         ))
         contacts.add(Contact(
-            name = "Friend2",
-            phoneNumber = "+201456789012",
+            name = R.string.friend2,
+            phoneNumber = R.string.friend2_phone,
             photo = R.drawable.friend_2
         ))
         contacts.add(Contact(
-            name = "Grandfather",
-            phoneNumber = "+201567890123",
+            name = R.string.grandfather,
+            phoneNumber = R.string.grandfather_phone,
             photo = R.drawable.grandfather
         ))
         contacts.add(Contact(
-            name = "Granny",
-            phoneNumber = "+201678901234",
+            name = R.string.granny,
+            phoneNumber = R.string.granny_phone,
             photo = R.drawable.granny
         ))
         contacts.add(Contact(
-            name = "Neighbour",
-            phoneNumber = "+201789012345",
+            name = R.string.neighbour,
+            phoneNumber = R.string.neighbour_phone,
             photo = R.drawable.neigbour
         ))
         contacts.add(Contact(
-            name = "Sister",
-            phoneNumber = "+201890123456",
+            name = R.string.sister,
+            phoneNumber = R.string.sister_phone,
             photo = R.drawable.sister
         ))
         contacts.add(Contact(
-            name = "Son",
-            phoneNumber = "+201512345678",
+            name = R.string.son,
+            phoneNumber = R.string.son_phone,
             photo = R.drawable.son
         ))
         contacts.add(Contact(
-            name = "Uncle",
-            phoneNumber = "+201912345678",
+            name = R.string.uncle,
+            phoneNumber = R.string.uncle_phone,
             photo = R.drawable.uncle
         ))
 
